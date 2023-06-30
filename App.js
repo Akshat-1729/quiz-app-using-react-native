@@ -1,23 +1,23 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import home from './screens/home'
+import Home from './screens/home';
+import Quiz from './screens/quiz';
+ 
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <home/>
+       <Home/>
+       {/* <Title/> */}
+       {/* <Quiz/> */}
       <StatusBar style="auto" />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  container:{
     paddingTop:40,
-
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+    paddingHorizontal:16,
+  }
 });

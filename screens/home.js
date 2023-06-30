@@ -1,14 +1,38 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet,Image, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
+import Title from '../components/title'
 
-const home = () => {
+const Home = () => {
   return (
     <View>
-      <Text>home</Text>
+      <Title/>
+      <View style={styles.bannerContainer}>
+      <Image source={require('../assets/quiz.jpg')}
+      style={styles.banner}
+      resizeMode='contain'
+      />
+      </View>
+
+      {/* anything in TouchableOpacity will be touchable */}
+      {/* easier to design than button */}
+      <TouchableOpacity>
+        <Text>Start</Text>
+      </TouchableOpacity>
+
     </View>
   )
 }
 
-export default home
+export default Home
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  banner:{
+    width:300,
+    height:300,
+  },
+  bannerContainer:{
+    justifyContent:'center',
+    alignItems:'center'
+
+  }
+})
