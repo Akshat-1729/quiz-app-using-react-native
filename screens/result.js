@@ -4,7 +4,7 @@ import React from 'react'
 const Result = () => {
   return (
     <View>
-      <Text>htis is result</Text>
+      
     </View>
   )
 }
