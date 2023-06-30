@@ -2,7 +2,7 @@ import { StyleSheet,Image, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import Title from '../components/title'
 
-const Home = () => {
+const Home = ({navigation}) => {
   return (
     <View>
       <Title/>
@@ -15,7 +15,7 @@ const Home = () => {
 
       {/* anything in TouchableOpacity will be touchable */}
       {/* easier to design than button */}
-      <TouchableOpacity>
+      <TouchableOpacity onPress={()=>navigation.navigate('Quiz')}>
         <Text>Start</Text>
       </TouchableOpacity>
 
